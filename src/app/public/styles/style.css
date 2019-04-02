@@ -1,0 +1,599 @@
+
+/*--------------------
+   1. CSS BASE
+----------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700');
+
+
+.simVehiculo {  
+ max-width:250px;
+ padding-left:40px;
+ text-align:center;
+}
+
+
+.simDiv, .subDiv {
+    max-width: 450px;  margin: -90px auto; 
+}
+.simDiv2T {
+    max-width:45%;  margin: 120px auto;
+}
+.simDiv2 {
+    max-width:70%;  margin: 30px auto; 
+} 
+.simDiv3 {
+    max-width: 400px;  margin: 0 auto;
+} 
+
+#map {
+    height: 100%;
+    width: 50%;
+    margin: 120px auto;
+    border: 1px solid #eef2f4;
+    -webkit-box-shadow: 0 0 10px #eef2f4;
+    box-shadow: 0 0 10px #eef2f4;
+}
+.google-maps {
+    position: relative;
+    padding-bottom: 75%; 
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+.sim-input-field {
+    max-width:90%;
+    padding: 5px;
+    outline: none;
+    border-radius: 5px 5px 5px 5px; 
+  }
+
+.sim-select {
+    border:2px solid rgb(190, 189, 189);
+}
+
+.slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    margin-top: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    border-radius:5px;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius:25px;
+    background: #f09d17;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #f09d17;
+    cursor: pointer;
+  }
+  
+.sim-input-field:focus {
+    border: 2px solid #f09d17;
+  }
+
+.input-field {
+  width:100%;
+  padding: 5px;
+  outline: none;
+  border-radius: 0px 5px 5px 0px; 
+}
+
+.input-field:focus {
+  border: 2px solid #f09d17;
+}
+
+.input-field-option {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    padding:10px;
+}
+
+
+.btn {
+  background-color: #1E51A4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn-small {
+    border-radius: 5px 5px 5px 5px; 
+    background-color: #1E51A4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+.intl-tel-input{
+    width: 100%;
+  }
+
+.hover:hover { color: #f09d17; }
+
+.btn:hover,.btn-small:hover {
+  background-color: #f09d17;
+  color: white;
+  -webkit-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
+  opacity: 1;
+}
+
+
+.center {
+    margin: auto;
+    width: 90%;
+    padding-left: 80px;
+  }
+
+
+a {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+a:focus,
+a:hover {
+    outline: 0 solid;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button:focus {
+    outline: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #3c4a62;
+    margin: 0 0 15px;
+    font-weight: 700;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.7em;
+    font-weight: 400;
+    color: #687284;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+a {
+    color: #5d6b82;
+}
+
+
+.inline li {
+    display: inline;
+}
+
+.inline-block li {
+    display: inline-block;
+    padding: 5px 15px;
+}
+
+.navbar-toggle {
+    border: 2px solid #12d1f3;
+    border-radius: 0;
+}
+
+.navbar-toggle .icon-bar {
+    background: #12d1f3 none repeat scroll 0 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.border {
+    border: 1px solid #ddd;
+}
+
+.border-left {
+    border-left: 1px solid #ddd;
+}
+
+.border-right {
+    border-right: 1px solid #ddd;
+}
+
+.border-top {
+    border-top: 1px solid #ddd;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #ddd;
+}
+
+
+.area-title {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.area-title h2 {
+    display: inline-block;
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.area-title h2::before,
+.area-title h2::after {
+    background: rgba(0, 0, 0, 0) url("/img/title-border.png") repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100px;
+}
+
+.area-title h2::after {
+    background: #f0bc12 none repeat scroll 0 0;
+    height: 3px;
+    width: 50px;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.top-padding {
+    padding: 100px 0;
+}
+
+.padding-top {
+    padding-top: 100px;
+}
+
+.padding-bottom {
+    padding-bottom: 100px;
+}
+
+.padding-100-70 {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.padding-100-50 {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+/*---------------------------------
+    Área de menú
+-----------------------------------*/
+
+.header-top-area {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+
+.mainmenu-area {
+    background: rgb(255, 255, 255); 
+    border-bottom: 1px solid #f0a212;
+    position: relative;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    z-index: 9999;
+    
+}
+
+
+.logo {
+    width: 80%;
+    margin-top: -17px;
+    margin-left: 30px;
+}
+
+.navbar-header {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.navbar {
+    border-top: 0 none;
+    margin-bottom: 0;
+    
+}
+
+.navbar-brand > img {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.is-sticky .navbar-brand > img {
+    max-width: 50%;
+}
+
+ul#nav {
+    float: right;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+ul#nav li a {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #030325;
+    letter-spacing: 1px;
+    padding: 30px 15px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+ul#nav li a:hover,
+ul#nav li.active a {
+    color: #f39c12;
+}
+
+.is-sticky ul#nav li a {
+    padding: 20px 15px;
+    color: #04034b;
+}
+
+.is-sticky ul#nav li a:hover,
+.is-sticky ul#nav li.active a {
+    color: #f39c12;
+}
+
+.is-sticky .navbar-header {
+    margin-top: -2px;
+}
+
+.is-sticky .mainmenu-area {
+    background:rgb(255, 255, 255);
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    z-index: 99999;
+}
+
+.menu-toggle.full {
+    border: 1px solid;
+    height: 40px;
+    letter-spacing: 2px;
+    padding-top: 8px;
+    position: absolute;
+    right: 15px;
+    text-align: center;
+    top: 20px;
+    width: 110px;
+    color: #06052f !important;
+}
+
+.is-sticky .menu-toggle.full {
+    top: 8px;
+}
+
+ul#nav li ul a,
+.is-sticky ul#nav li ul a {
+    border-bottom: 1px solid #1a1a1a;
+    padding: 10px;
+    padding-left: 15px;
+}
+
+
+
+/*------------------------------
+         SCROLL TO TOP
+-------------------------------*/
+
+a.scrolltotop {
+    background: #04225293 none repeat scroll 0 0;
+    bottom: 20px;
+    -webkit-box-shadow: 0 0 0 7px transparent;
+    box-shadow: 0 0 0 7px transparent;
+    color: #ffffff;
+    display: none;
+    font-size: 22px;
+    height: 40px;
+    padding-top: 8px;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+    width: 40px;
+    z-index: 99;
+}
+
+a.scrolltotop:hover {
+    -webkit-box-shadow: 0 0 0 0 #272727;
+    box-shadow: 0 0 0 0 #272727;
+    background: #272727;
+}
+
+/* ----------------------------
+    ESTILO DE LOS CONTENEDORES
+------------------------------ */
+
+.contenedor {
+    border: 1px solid #eef2f4;
+    -webkit-box-shadow: 0 0 10px #eef2f4;
+    box-shadow: 0 0 10px #eef2f4;
+    margin-bottom: 30px;
+    padding: 30px 20px 30px 80px;
+    position: relative;
+}
+
+.contenedor h4 {
+    color: #f39c12;
+}
+
+.contenedor h4:hover {
+    color: #cf850d;
+}
+
+.contenedor i:hover, .contenedor span:hover{
+    color: #f39c12;
+}
+
+.icono {
+    border-right: 1px solid #ddd;
+    color: #f39c12;
+    font-size: 30px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 60px;
+}
+
+
+/* Tooltip container */
+.tooltip {
+  position: absolute;
+  display: inline-block;
+}
+
+/* Estilo del tooltip */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Mostrar el tooltip al hacer hover en el ícono */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+[type=radio]:checked + img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+
+
+.gps {
+    width: 42px;
+    position: relative;
+}
+.gps label {
+    border-radius: 5px 5px 5px 5px; 
+    cursor: pointer;
+    position: absolute;
+    width: 42px;
+    height: 32px;
+    top: 0;
+    left: 0;
+    background: #eee;
+    border:2px solid rgb(200, 200, 200);
+}
+
+.gps label:after {
+    opacity: 0.1;
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 8px;
+    background: transparent;
+    top: 7px;
+    left: 12px;
+    border: 3px solid rgb(8, 18, 73);
+    border-top: none;
+    border-right: none;
+
+    transform: rotate(-45deg);
+}
+
+
+ .gps label:hover::after {
+    opacity: 0.2;
+}
+.gps label:hover {
+    border: 2px solid #f09d17;
+}
+
+.gps input[type=checkbox]:checked + label:after {
+    opacity: 1;
+}
+  

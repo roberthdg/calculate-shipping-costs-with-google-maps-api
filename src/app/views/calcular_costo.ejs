@@ -1,0 +1,104 @@
+<% include partials/_header %>
+<section class="section-padding">
+        <h4 class="simh4" style="text-align:center;">Obtén un estimado del costo de tu flete </h4>
+</section>
+
+<!-- formulario principal -->
+        <div class="simDiv">
+          <div class="contenedor">
+              <a href="/sesion/perfil"><div class="icono">
+          <i class="fas fa-mail-bulk"></i></div>
+          <h4>Datos del flete</h4></a>
+          <p> 
+            <form class="formSimulador" action ="/calcular/reg_flete" method="POST">
+              <label>Desde: </label><br><input class="sim-input-field" value="<%= data.origen %>" name="origen" id="origen" type="text" size="50" placeholder="Lugar de origen"><br>
+              <label>Hasta: </label><br><input class="sim-input-field"  value="<%= data.destino %>" name="destino" id="destino" type="text" size="50" placeholder="Lugar de destino"><br>
+              <label style="margin-top:10px;">Nº de peonetas: </label><br>
+              <select class="sim-input-field sim-select" name="peonetas" id="peoneta">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+              </select><br>    
+            </form>     
+          </p>
+      </div>
+    </div>
+  
+    <div class="contenedor simDiv2T">
+      <div class="icono"><i class="fas fa-map-marked-alt"></i></div>
+      <h4 style="color: #f39c12;">Ruta del flete<br> <img style="max-width:138px;" src="/img/powered_by_google.png"></h4>
+  </div>
+
+<!-- div wrapper del mapa -->
+  <div style="margin-left:5%; margin-top:-100px; height:100%; width: 90%">
+    <div id="map"></div>
+  </div>
+
+<!-- div wrapper del mapa -->
+  <div class="contenedor wow fadeInUp simDiv2">
+      <div class="icono">
+          <i class="fas fa-truck"></i>
+      </div>
+      <h4>Tipo de vehículo</h4>
+      <label class="simVehiculo">Furgón <i class="fas fa-info-circle"  data-toggle="tooltip" data-placement="top" 
+        title="Ideal para transportar cajas, muebles pequeños y herramientas. Vehículos tipo Fiat Fiorino, Changan M2, etc."></i>
+        <input type="radio" name="tipo_vehiculo" value=1 id="Furgón" <% if(data.tipo_vehiculo==1) {%> checked <%}%>> 
+        <img src="/img/vehiculo/furgon.jpg">
+      </label>
+      
+      <label class="simVehiculo">Camioneta <i class="fas fa-info-circle"  data-toggle="tooltip" data-placement="top" 
+        title="Camionetas cerradas y pick up, como una Toyota Hilux, Mahindra Scorpion, etc."></i>
+        <input type="radio" name="tipo_vehiculo" value=1.2 id="Camioneta" <% if(data.tipo_vehiculo==2) {%> checked <%}%>>
+        <img src="/img/vehiculo/camioneta.jpg">
+      </label>
+
+      <label class="simVehiculo">Mini camión abierto <i class="fas fa-info-circle"  data-toggle="tooltip" data-placement="top" 
+        title="Mini camiones tipo Kia Frontier y Changan pick up."></i>
+        <input type="radio" name="tipo_vehiculo" value=1.5 id="Mini camión abierto" <% if(data.tipo_vehiculo==3) {%> checked <%}%>>
+        <img src="/img/vehiculo/camion_abierto.jpg">
+      </label>
+      
+      <label class="simVehiculo">Mini camión cerrado <i class="fas fa-info-circle"  data-toggle="tooltip" data-placement="top" 
+        title="Mini camiones tipo Kia Frontier carrozado y DFSK Cargo Box."></i>
+        <input type="radio" name="tipo_vehiculo" value=1.6 id="Mini camión cerrado" <% if(data.tipo_vehiculo==4) {%> checked <%}%>>
+        <img src="/img/vehiculo/camion_cerrado.jpg">
+      </label>
+
+      <label class="simVehiculo">Camión 5T abierto <i class="fas fa-info-circle"  data-toggle="tooltip" data-placement="top" 
+        title="Camión de gran capacidad para transportar cargas de gran tamaño."></i>
+        <input type="radio" name="tipo_vehiculo" value=2 id="Camión 5T abierto" <% if(data.tipo_vehiculo==5) {%> checked <%}%>>
+        <img src="/img/vehiculo/camion_5t_abierto.jpg">
+      </label>
+      
+      <label class="simVehiculo">Camión 5T cerrado <i class="fas fa-info-circle"  data-toggle="tooltip" data-placement="top" 
+        title="Camión ideal para transportar mercadería a través de todo el país."></i>
+        <input type="radio" name="tipo_vehiculo" value=2.2 id="Camión 5T cerrado" <% if(data.tipo_vehiculo==6) {%> checked <%}%>>
+        <img src="/img/vehiculo/camion_5t_cerrado.jpg">
+      </label>
+  </div>
+
+  <div class="simDiv3">
+    <div class="contenedor wow fadeInUp" >
+     <div class="icono">
+    <i class="fas fa-calculator"></i></div>
+     <h4>Costo del flete</h4>
+          
+     <p>
+        <strong>Origen:</strong> <span id="p_origen"><%= data.origen %></span>.<br><br>
+        <strong>Destino:</strong>  <span id="p_destino"><%= data.destino %></span>.<br><br>
+        <strong>Distancia:</strong> <span id="p_distancia">0</span> Km.<br><br>
+        <strong>Vehículo:</strong> <span id="p_vehiculo"><%= data.tipo_vehiculo %></span>. <br> <br>  
+         <strong>Peonetas:</strong> <span id="p_peoneta">0 </span> <br> <br>
+        <span style="font-size:22px; padding-top:20px"> <strong>Monto estimado:</strong> $<span id="p_total">0</span>  </span><br><br>
+ </div>
+</div>
+
+   
+<% include partials/_footer %>
